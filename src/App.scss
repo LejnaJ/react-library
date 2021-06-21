@@ -1,0 +1,121 @@
+$light-gray: #d3d3d3;
+$dark-gray: rgb(77, 75, 75);
+$primary: #69B3B4;
+$primary-font-color:#736f6f;
+body {
+    font-family: 'Poppins';
+    color: $primary-font-color;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h3 {
+    color: white;
+    font-size: 3em;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: $dark-gray;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: $primary;
+}
+
+.btn.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.header-app {
+    margin-bottom: 20px;
+    .container {
+        display: flex;
+        padding: 20px 0;
+        flex-direction: row;
+        justify-content: space-between;
+        .logo-wrapper {
+            font-size: 1.5em;
+            font-weight: 700;
+            span {
+                color: #69B3B4;
+            }
+        }
+        .main-nav {
+            display: flex;
+            li {
+                padding: 2px 4px;
+                margin: 0 8px;
+            }
+        }
+    }
+}
+
+.content.main {
+    .text,
+    .book-img {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+    .text {
+        .introduction-title span {
+            font-size: 5rem;
+            font-weight: 600;
+            color: #000000;
+            background-image: linear-gradient( -270deg, #69B3B4, #F9F871);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .introduction-text {
+            padding-right: 40px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+#section-search {
+    border-top: 1px solid $light-gray;
+    padding-top: 25px;
+    padding-bottom: 75px;
+    // height: 100vh;
+    scroll-behavior: smooth;
+    form {
+        align-items: baseline;
+        .form-group {
+            .form-control {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        .btn.btn-primary {
+            margin-left: -6%;
+            padding: 10px 20px;
+            border-radius: 50%;
+        }
+    }
+    .show-as {
+        margin-left: auto;
+        p {
+            margin: 0 5px;
+        }
+        p.active {
+            color: $primary;
+        }
+    }
+    .results {
+        text-align: center;
+    }
+}
