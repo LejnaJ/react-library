@@ -7,7 +7,7 @@ function App() {
 
   const [result, setResult] = useState([]);
   const [book, setBook] = useState("");
-  const [apiKey, setApiKey] = useState("AIzaSyBQUMhzPEVpfEA613Y_2V1iLYOEMrvczmY");
+  const [apiKey, setApiKey] = useState("");
 
 
  
@@ -19,14 +19,14 @@ function App() {
   function handleSubmit(event){
     event.preventDefault();
   
-    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${book}&key=${apiKey}&maxResults=30`)
+    axios.get(`https://www.googleapis.com/books/v1/volumes?q=${book}&key=${process.env.REACT_APP_GOOGLE_API_KEY}&maxResults=30`)
     .then(data => {
       console.log(data.data.items);
      setResult(data.data.items);
     })
 
   }
-
+  
   return (
     <div className="App">
     <header className="header-app">
